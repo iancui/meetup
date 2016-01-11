@@ -1,5 +1,21 @@
 
-<div class="home-banner"></div>
+<div class="home-banner">
+  <div class="banner-inner container clearfix">
+    <h1>It's Party Time!</h1>
+    <p class="subheading">天地很远，不如一聚</p>
+    <div class="home-banner-links">
+      <%= link_to "发布新活动", new_issue_path , class: "banner-btn btn" %>
+    </div>
+  </div>
+</div>
+<div class="issue-list-header">
+  <div class="container clearfix">
+    <h1 class="issue-list-heading">所有活动都在下面了...</h1>
+  </div>
+</div>
+<div class="container clearfix">
+<%=render :partial => "issue_list", :locals => { :issues => @issues } %>
+</div>
 
 <script>
   $('.home-banner').anystretch("<%= image_url "home-banner-bg.jpg" %>");

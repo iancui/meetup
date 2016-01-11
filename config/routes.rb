@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   root 'page#welcome'
 
   get '/about' => 'page#about'
-
+  resources :issues
+    post '/issues/:issue_id/comments' => "comments#create"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
