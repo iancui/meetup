@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,6 +10,10 @@ Rails.application.routes.draw do
   get '/about' => 'page#about'
   resources :issues
     post '/issues/:issue_id/comments' => "comments#create"
+
+    get '/signup' => 'users#signup', as: :signup
+
+    resources :users , only: [:create]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
