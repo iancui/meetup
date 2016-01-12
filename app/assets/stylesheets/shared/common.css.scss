@@ -71,6 +71,10 @@ a:hover {
 }
 // form.css
 form {
+  .error {
+    margin: 5px 0 9px 0;
+    color: #DB8A14;
+  }
   input {
     font-size: 21px;
     width: 100%;
