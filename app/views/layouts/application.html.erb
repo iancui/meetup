@@ -18,21 +18,31 @@
       </ul>
       <ul class="nav right">
         <% if current_user %>
-          <li><%= link_to current_user.name, "#" %></li>
-          <li><%= link_to "登出", logout_path,method: :delete %></li>
+        <li><%= link_to current_user.name, "#" %></li>
+        <li><%= link_to "登出", logout_path,method: :delete %></li>
         <% else %>
-          <li><%= link_to "登录", login_path %></li>
-          <li><%= link_to "注册", signup_path %></li>
+        <li><%= link_to "登录", login_path %></li>
+        <li><%= link_to "注册", signup_path %></li>
         <% end %>
       </ul>
     </div>
   </div>
-
+  <% if flash.notice %>
+  <div class="notice"><%= flash.notice %></div>
+  <% end %>
   <%= yield %>
   <div class="footer">
     <div class="container">
       footer
     </div>
   </div>
+  <script>
+    $('.home-banner').anystretch("<%= image_url "home-banner-bg.jpg" %>");
+    var hideNotice = function(){
+      $(".notice").fadeOut("slow");
+    }
+    setTimeout(hideNotice, 1000);
+  </script>
+
 </body>
 </html>

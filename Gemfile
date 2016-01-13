@@ -30,6 +30,12 @@ gem 'font-awesome-rails', '~> 4.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'jquery-atwho-rails'
+
+# MarkDown和代码高亮
+gem 'redcarpet'
+gem 'pygments.rb'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
