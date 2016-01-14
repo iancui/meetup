@@ -1,12 +1,13 @@
 <div class="new-issue-form-container clearfix">
   <div class="new-issue-form clearfix">
     <%= form_for issue do |f| %>
+    <%= f.hidden_field :user_id %>
     <dl class="form">
-     <dt><%= f.label :title %></dt>
+     <dt><%= f.label '活动主题' %></dt>
      <dd><%= f.text_field :title %></dd>
    </dl>
    <dl class="form">
-     <dt><%= f.label :content %></dt>
+     <dt><%= f.label '活动内容' %></dt>
      <dd><%= f.text_area :content %></dd>
    </dl>
    <p><%= f.submit  :class => "submit-issue-button btn btn-primary" %></p>

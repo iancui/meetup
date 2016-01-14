@@ -38,13 +38,38 @@
   background: #fff;
 }
 
-.footer {
-  border-top: 1px solid #c5c5c5;
-  min-height: 200px;
-  margin: 3em 0;
-  padding-top: 3em;
-  padding-bottom: 3em;
-  background: #f8f5f0;
+.site-footer {
+  color: #888
+}
+.site-footer ol,.site-footer ul {
+  list-style: none
+}
+.site-footer li {
+  line-height: 1.4em;
+  font-size: .9em
+}
+.site-footer a {
+  color: #888
+}
+.site-footer__row {
+  width: 100%;
+  padding: 10px
+}
+.site-footer__row--main {
+  background-color: #000;
+  padding-top: 10px;
+  padding-bottom: 20px
+}
+.site-footer__row--sub p {
+  float: left;
+  padding: 10px 0
+}
+.site-footer__row--sub p strong {
+  font-family: Plantin,"Plantin Pro","Book Antiqua",Georgia,"Times New Roman",serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding-left: 3px;
+  color: #DFDFDF
 }
 
 .home-banner {
