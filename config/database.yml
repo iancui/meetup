@@ -50,7 +50,8 @@
 production:
   adapter: postgresql
   encoding: unicode
-  database: meetup_production
+  database: d3ldj1r7qmkm80
   pool: 5
-  username: meetup
+  username: watrpllblpmnns
   password: <%= ENV['MEETUP_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
