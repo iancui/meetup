@@ -31,11 +31,7 @@
   <div class="notice"><%= flash.notice %></div>
   <% end %>
   <%= yield %>
-  <div class="footer">
-    <div class="container">
-      footer
-    </div>
-  </div>
+  <% render :partial => "layouts/footer" %>
   <script>
     $('.home-banner').anystretch("<%= image_url "home-banner-bg.jpg" %>");
     var hideNotice = function(){

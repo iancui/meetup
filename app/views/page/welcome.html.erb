@@ -8,16 +8,19 @@
     </div>
   </div>
 </div>
+<% if @issues.count != 0 %>
 <div class="issue-list-header">
   <div class="container clearfix">
     <h1 class="issue-list-heading">所有活动都在下面了...</h1>
   </div>
 </div>
 <div class="container clearfix">
-<% if @issues.count == 0 %>
-<h2 class="issue-list-heading">快来召集小伙伴们来嗨皮吧！</h2>
-<%= link_to "发布新活动", new_issue_path , class: "banner-btn btn" %>
-<% else %>
 <%=render :partial => "issue_list", :locals => { :issues => @issues } %>
-<% end -%>
 </div>
+<% else %>
+<div class="issue-list-header">
+  <div class="container clearfix">
+    <h1 class="issue-list-heading">暂时没有活动...</h1>
+  </div>
+</div>
+<% end -%>

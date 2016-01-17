@@ -6,6 +6,13 @@ gem 'rails', '4.1.2'
 # Use mysql as the database for Active Record
 group :development do
   gem 'mysql2', '~> 0.3.20'
+
+  gem 'activeadmin', '~> 1.0.0.pre2'
+  # Plus integrations with:
+  gem 'devise'
+gem 'cancan' # or cancancan
+gem 'draper'
+gem 'pundit'
 end
 group :production do
   gem 'pg'
